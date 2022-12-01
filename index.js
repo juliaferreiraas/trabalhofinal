@@ -16,9 +16,9 @@ app.use((req, res, next) => {
 
 app.get('/produtos', async function(req, res){
     const produtos = await produto.findAll(req.body);
-    res.json(produtos)
+    res.json(produtos);
 });
 
-app.listen(3000, () => {
-    console.log(`O servidor está rodando na porta 3000`)
+app.listen(3001, () => {
+    console.log(`O servidor está rodando na porta 3001`)
 })
