@@ -19,6 +19,11 @@ app.get('/produtos', async function(req, res){
     res.json(produtos);
 });
 
+app.post('/produtos', async (req,res) => {
+    const createProduct = await product.create(req.body)
+    res.json(createProduct)
+})
+
 app.listen(3001, () => {
     console.log(`O servidor está rodando na porta 3001`)
 })
