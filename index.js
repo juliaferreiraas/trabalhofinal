@@ -20,8 +20,8 @@ app.get('/produtos', async function(req, res){
 });
 
 app.post('/produtos', async (req,res) => {
-    const createProduct = await product.create(req.body)
-    res.json(createProduct)
+    const criar = await produto.create(req.body)
+    res.json(criar)
 })
 
 app.listen(3001, () => {
